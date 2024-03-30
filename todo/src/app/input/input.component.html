@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<div class="header">
+  <h1>To-Do List</h1>
+  
+    <input type="text" placeholder="Enter task here" [(ngModel)]="name">
+    <button (click)="isEditing ? updateTask(editingIndex!) : addInput()">
+      {{ isEditing ? 'UPDATE' : 'ADD' }}
+    </button>
+
+    <div class="list">
+      <div *ngFor="let task of tasks; let i = index" style="margin-bottom: 10px;" id="demo{{i}}">
+      <input type="text" placeholder="Enter task here" [value]="task">
+      <button (click)="editTask(i)">
+        <i class="fas fa-edit"></i> <!-- Font Awesome edit icon -->
+        EDIT
+      </button>
+      <button (click)="deleteTask(i)">
+        <i class="fas fa-trash-alt"></i> <!-- Font Awesome delete icon -->
+        DELETE
+      </button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="header">
+  <h2>To-Do List</h2>
+  <div>
+    <input type="text" placeholder="Enter task here"> -->
+<!-- <button (click)="addInput()">ADD</button> -->
+<!-- <button (click)="isEditing ? updateTask() : addInput()">
+      {{ isEditing ? 'UPDATE' : 'ADD' }}
+    </button> -->
+<!-- <button (click)="addInput()">
+      {{ isEditing ? 'UPDATE' : 'ADD' }}
+    </button> -->
+<!-- <div *ngFor="let task of tasks; let i = index" style="margin-bottom: 10px;" id="demo{{i}}">
+      <input type="text" placeholder="Enter task here" value="{{task}}">
+      <span>{{ task }}</span>
+      <button (click)="editTask(i)">EDIT</button>
+      <button (click)="deleteTask(i)">DELETE</button>
+    </div>
+  </div>
+</div> -->
+<!-- <div *ngFor="let task of tasks; let i = index">
+  <span>{{ task }}</span>
+  <button (click)="editTask(i)">Edit</button>
+</div> -->
+
+<!-- <div>
+  <input type="text"  [disabled]="!isEditing" placeholder="enter">
+  <button (click)="toggleEdit()">
+    {{ isEditing ? 'UPDATE' : 'Edit' }}
+  </button>
+</div> -->
+<!-- 
+<div class="footer">
+  <h2>Saved Tasks:</h2>
+  <ul>
+    <li *ngFor="let task of savedTasks">{{ tasks }}</li>
+  </ul>
+</div> -->
